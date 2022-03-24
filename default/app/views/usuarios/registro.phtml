@@ -1,0 +1,43 @@
+<h2>registro de usuario</h2>
+<div class="row">
+    <?php echo Form::open('usuarios/guardar','POST', 'class="clos s12') ?>
+    <div class="row">
+        <div class="input-field col s6">
+            <?php echo Form::text('usuarios.nombres', 'required'); ?>
+            <?php echo Form::label('Nombres', 'nombres'); ?>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <?php echo Form::text('usuarios.apellidos', 'required'); ?>
+                <?php echo Form::label('Apellidos', 'apellidos'); ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <?php echo Form::text('usuarios.edad', 'required') ?>
+                <?php echo Form::label('Edad', 'edad') ?>
+            </div>
+            <div class="input-field col s4">
+                <?php echo Form::text('usuarios.telefono', 'required') ?>
+                <?php echo Form::label('Telefono', 'telefono') ?>
+            </div>
+            <div class="input-field col s4">
+                <?php echo Form::text('usuarios.dui', 'required') ?>
+                <?php echo Form::label('Dui', 'dui') ?>
+            </div>
+            <div class="input-field col s6">
+                <?php echo Form::date('usuarios.fecha_de_nacimiento', 'required') ?>
+                <?php echo Form::label('fecha_de_nacimient', 'fecha_de_nacimient') ?>
+            </div>
+            <div class="input-field col s6">
+                <?php echo Form::text('usuarios.email', 'required') ?>
+                <?php echo Form::label('E-mail', 'email') ?>
+            </div>
+            <div class="row">
+                <?php echo Form::submit('guardar', 'class="btn green"') ?>
+                <?php echo Form::submit('limpiar', 'class="btn red"') ?>
+            </div>
+        </div>
+        <?php echo Form::close() ?>
+    </div>
+</div>

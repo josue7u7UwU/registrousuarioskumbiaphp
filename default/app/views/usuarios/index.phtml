@@ -1,0 +1,32 @@
+<h1>LISTADO DE USUARIOS  </h1>
+<div class="divider"></div>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>NOMBRES</th>
+        <th>APELLIDOS</th>
+        <th>Edad</th>
+        <th>TELEFONO</th>
+        <th>E-MAIL</th>
+        <th>DUI</th>
+        <th>fecha_de_nacimiento</th>
+    </thead>
+    <tbody>
+        <?php foreach ($listUsuarios->items as $item ):  ?>
+            <tr>
+                <td><?php  echo $item->id?></td>
+                <td><?php  echo $item->nombres?></td>
+                <td><?php  echo $item->apellidos?></td>
+                <td><?php  echo $item->edad?></td>
+                <td><?php  echo $item->telefono?></td>
+                <td><?php  echo $item->email?></td>
+                <td><?php  echo $item->dui?></td>
+                <td><?php  echo $item->fecha_de_nacimiento?></td>
+                <td>
+                    <?php  echo Html::link('usuarios/borrar/'.$item->id,'<i class="material-icons">delete</i>','class="btn red"')?>
+                    <?php  echo Html::link('usuarios/editar/'.$item->id,'<i class="material-icons">edit</i>','class="btn green"')?>
+                </td>
+        </tr>
+            <?php endforeach ?>
+    </tbody>
+</table>
